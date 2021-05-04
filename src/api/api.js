@@ -14,7 +14,8 @@ export const getTransactionsByAddress = (address, onSuccess) => {
             to,
             value,
             confirmations,
-            hash         
+            hash,
+            key: hash
         }));
         onSuccess(transactions);
     });
