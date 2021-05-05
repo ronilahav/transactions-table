@@ -2,7 +2,7 @@ const API_URL = 'https://api.etherscan.io/api';
 const API_PARAMETERS = 'module=account&action=txlist&startblock=0&endblock=99999999&sort=asc';
 const API_KEY = 'IT8AGK2V9APVK4MTQS2HEJ6QG9GY7A5SEU';
 
-export const getTransactionsByAddress = (address, onSuccess) => {
+export const getTransactionsByAddress = (address, onSuccess, onFailure) => {
     const url = `${API_URL}?${API_PARAMETERS}&apikey=${API_KEY}&address=${address}`;
     fetch(url)
     .then((response) => response.json())
@@ -18,5 +18,8 @@ export const getTransactionsByAddress = (address, onSuccess) => {
             key: hash
         }));
         onSuccess(transactions);
+    })
+    .catch((e) => {
+        onFailure(e);
     });
 };

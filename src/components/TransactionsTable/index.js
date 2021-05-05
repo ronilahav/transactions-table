@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
+import './style.scss';
 
 
 const TransactionsTable = ({ transactions }) => {
@@ -13,7 +14,7 @@ const TransactionsTable = ({ transactions }) => {
     ];
 
     return (
-        <Table columns={columns}
+        <Table className='transactions-table' columns={columns}
             dataSource={transactions}
             pagination={false} />
     );

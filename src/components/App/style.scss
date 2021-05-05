@@ -1,0 +1,15 @@
+.transactions-app {
+  min-height: 100%;
+  height: fit-content;
+  background-image: url(https://www.gk8.io/wp-content/uploads/2021/04/8-layers-1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+
+  .error {
+    color: white;
+    font-size: 20px;
+  }
+}
