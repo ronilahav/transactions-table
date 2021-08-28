@@ -15,10 +15,8 @@ const Form = ({ onSubmit, onFailure, toggleLoading }) => {
 
     return (
         <form onSubmit={handleSubmit} className='transactions-form'>
-
-                <span>Enter Address:</span>
-                <input className='address-input' type='text' value={address} onChange={(e) => setAddress(e.target.value)} required />
-
+            <span>Enter Address:</span>
+            <input className='address-input' type='text' value={address} onChange={(e) => setAddress(e.target.value)} required />
             <input className='submit-btn' type='submit' value='Submit' />
         </form>
     );
