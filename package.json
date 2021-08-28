@@ -16,7 +16,7 @@
   "main": "public/electron.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \" npm start\" \"wait-on http://localhost:3000 && electron .\""
